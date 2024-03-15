@@ -19,15 +19,16 @@ export const Secction1 = styled.div`
 export const Secction2 = styled.div`
   display: flex;
   flex-direction: row;
-  background-color: rebeccapurple;
-  justify-content: space-around;
+  /* background-color: rebeccapurple; */
+  justify-content: flex-end;
+  gap:40px;
   align-items: center;
-  width: 50%;
+  width: 100%;
 
   div {
     display: flex;
     flex-direction: row;
-    gap: 48px;
+    gap: 10px;
   }
 
   ul {

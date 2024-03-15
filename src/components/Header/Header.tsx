@@ -1,6 +1,7 @@
+import { MaterialUISwitch } from "../SwitchTheme/Switch";
 import { HeaderContainer, Secction2, Secction1 } from "./Header.style";
 
-export default function Header() {
+export const Header:React.FC = () => {
   return (
     <HeaderContainer>
       <Secction1>
@@ -22,6 +23,7 @@ export default function Header() {
           <p>Image Github</p>
         </div>
       </Secction2>
+      <MaterialUISwitch/>
     </HeaderContainer>
   );
 }

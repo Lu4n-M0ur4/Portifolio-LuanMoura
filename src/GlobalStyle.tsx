@@ -6,4 +6,12 @@ export const GlobalStyle = createGlobalStyle`
     height: 100vh;
     
 }
+
+
+body{
+    background-color: #f5f5f5;
+}
+
+
+
 `;
