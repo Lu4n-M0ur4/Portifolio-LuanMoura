@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import Switch from "react-switch";
 import { HeaderContainer, Secction2, Secction1 } from "./Header.style";
-import { ThemeContext } from "styled-components";
+import { DefaultTheme, ThemeContext } from "styled-components";
+
 import { shade } from "polished";
 
 interface Props {
@@ -9,7 +10,13 @@ interface Props {
 }
 
 export const Header: React.FC<Props> = ({ toggleTheme }) => {
-  const { colors , title } = useContext(ThemeContext);
+  const theme = useContext<DefaultTheme|undefined>(ThemeContext);
+
+  if (!theme) {
+    return undefined;
+  }
+
+  const { colors, title } = theme;
 
   return (
     <HeaderContainer>
@@ -19,9 +26,9 @@ export const Header: React.FC<Props> = ({ toggleTheme }) => {
         <div>
           <Switch
             onChange={toggleTheme}
-            checked={title === "dark"}
+            checked={title == "dark"}
             checkedIcon={false}
-            uncheckedIcon={false}
+            uncheckedIcon={true}
             height={10}
             width={40}
             handleDiameter={20}
