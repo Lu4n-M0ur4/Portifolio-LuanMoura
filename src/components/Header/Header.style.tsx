@@ -7,6 +7,12 @@ export const HeaderContainer = styled.div`
 
   width: 100%;
   height: 100px;
+
+
+
+  color:${props => props.theme.colors.text};
+  font-family:sans-serif;
+  font-size:20px ;
 `;
 export const Secction1 = styled.div`
   width: 187px;

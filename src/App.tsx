@@ -1,9 +1,23 @@
-import Header from "./components/Header/Header";
+import { ThemeProvider } from "styled-components";
+import { useState } from "react";
+import { Header } from "./components/Header/Header";
+import ligth from "./styles/themes/ligth";
+import dark from "./styles/themes/dark";
+import { GlobalStyle } from "./styles/GlobalStyle";
 
 function App() {
+  const [theme, setTheme] = useState(dark);
+
+  const toggleTheme = () => {
+    setTheme(theme.title === "ligth" ? dark : ligth);
+  };
+
   return (
     <>
-      <Header />
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Header toggleTheme={toggleTheme} />
+      </ThemeProvider>
     </>
   );
 }
