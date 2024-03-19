@@ -6,6 +6,8 @@ import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
 import Brightness5Icon from "@mui/icons-material/Brightness5";
 
 import { shade } from "polished";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 interface Props {
   toggleTheme(): void;
@@ -37,8 +39,8 @@ export const Header: React.FC<Props> = ({ toggleTheme }) => {
           </ul>
         </div>
         <div>
-          <p>Img Linkedin</p>
-          <p>Image Github</p>
+          <LinkedInIcon />
+          <GitHubIcon />
         </div>
         <div>
           {title == "dark" ? <NightlightRoundIcon /> : <Brightness5Icon />}{" "}

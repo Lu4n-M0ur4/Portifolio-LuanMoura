@@ -7,12 +7,10 @@ export const HeaderContainer = styled.div`
 
   width: 100%;
   height: 100px;
-
-
-
-  color:${props => props.theme.colors.text};
-  font-family:sans-serif;
-  font-size:20px ;
+ 
+  color: ${(props) => props.theme.colors.text};
+  font-family: sans-serif;
+  font-size: 20px;
 `;
 export const Secction1 = styled.div`
   width: 187px;
@@ -20,6 +18,7 @@ export const Secction1 = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  
 `;
 
 export const Secction2 = styled.div`
@@ -27,9 +26,10 @@ export const Secction2 = styled.div`
   flex-direction: row;
   /* background-color: rebeccapurple; */
   justify-content: flex-end;
-  gap:40px;
+  gap: 40px;
   align-items: center;
   width: 100%;
+  margin: 32px 64px 0px 0px;
 
   div {
     display: flex;
@@ -40,6 +40,7 @@ export const Secction2 = styled.div`
   ul {
     display: flex;
     flex-direction: row;
-   gap:48px ;
+    gap: 48px;
+    list-style-type: none;
   }
 `;
