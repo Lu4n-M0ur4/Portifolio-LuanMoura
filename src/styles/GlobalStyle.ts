@@ -6,4 +6,13 @@ export const GlobalStyle = createGlobalStyle`
     height: 100vh;
     
 }
+
+
+body{
+   
+    background-color: ${props => props.theme.colors.background};
+}
+
+
+
 `;
