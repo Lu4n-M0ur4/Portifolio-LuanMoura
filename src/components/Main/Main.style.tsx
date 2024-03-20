@@ -14,11 +14,14 @@ export const MainContainer = styled.div`
     color: ${(props) => props.theme.colors.text};
 
     h1 {
-      width: 490px;
+      width: 540px;
       height: 192px;
 
       font-size: 96px;
+      letter-spacing:6px;
+      
     }
+    
     p{
         font-size: 24px;
     }
@@ -32,7 +35,15 @@ export const MainContainer = styled.div`
 
         color:${(props) => props.theme.colors.text} ;
         font-size: 24px;
+        font-weight: bold;
         cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:10px
+
+
     }
   }
 
@@ -44,7 +55,7 @@ export const MainContainer = styled.div`
 
     img {
       width: auto;
-      height: 700px;
+      height: 75%;
       backdrop-filter: brightness(#fff 120%);
     }
   }

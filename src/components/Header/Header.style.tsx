@@ -13,11 +13,17 @@ export const HeaderContainer = styled.div`
   font-size: 20px;
 `;
 export const Secction1 = styled.div`
-  width: 187px;
+  width: 400px;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  img{
+   width:  300px;
+padding-left: 32px;
+  
+  }
   
 `;
 
