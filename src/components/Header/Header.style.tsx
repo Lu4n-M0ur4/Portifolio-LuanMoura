@@ -16,7 +16,7 @@ export const Secction1 = styled.div`
   width: 400px;
   height: 100px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 
   img{
