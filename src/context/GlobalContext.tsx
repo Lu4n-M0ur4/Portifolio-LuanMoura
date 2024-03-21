@@ -25,7 +25,8 @@ const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   function logout ()  {
-    console.log("logouttttt");
+    
+    
   }
 
   return (
