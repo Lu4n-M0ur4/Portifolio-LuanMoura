@@ -1,40 +1,31 @@
 import { createContext, useState } from "react";
+import ligth from "../styles/themes/ligth";
+import dark from "../styles/themes/dark";
+import { DefaultTheme } from "styled-components/dist/types";
 
-export type UserProps= {
-name:string,
-token:string
-}
-export type authContextProps= {
- user : UserProps|null;
- login: (user:UserProps) => void;
- logout: () =>void
-}
+export type UserProps = {
+  name: string;
+  token: string;
+};
+export type authContextProps = {
+  toggleTheme: () => void;
+  theme: DefaultTheme;
+};
 
-
-const GlobalContext = createContext<authContextProps>({}as authContextProps);
-
-
+const GlobalContext = createContext<authContextProps>({} as authContextProps);
 
 const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
-  const [user, setUser] = useState<UserProps|null>(null);
+  const [theme, setTheme] = useState(dark);
 
-  const login = (user:UserProps) => {
-    setUser(user);
-
-    console.log(user);
+  const toggleTheme = () => {
+    setTheme(theme.title === "light" ? dark : ligth);
   };
 
-  function logout ()  {
-    
-    
-  }
-
   return (
-    <GlobalContext.Provider value={{ user, login, logout }}>
+    <GlobalContext.Provider value={{ theme, toggleTheme }}>
       <>{children}</>
     </GlobalContext.Provider>
   );
 };
 
-
-export {GlobalProvider,GlobalContext}
+export { GlobalProvider, GlobalContext };

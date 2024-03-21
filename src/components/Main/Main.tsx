@@ -32,11 +32,10 @@ export const Main: React.FC = () => {
             DEV FULLSTA
             <Cursor cursorColor={theme.colors.text} cursorStyle="C" />K
           </h1>
-          
+
           <button>
             Ver meu Portifólio <ArrowOutwardIcon />
           </button>
-          
         </article>
         <div>
           <img src={Luan} alt="" />
