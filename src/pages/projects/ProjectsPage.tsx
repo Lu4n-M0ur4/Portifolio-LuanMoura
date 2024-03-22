@@ -1,21 +1,18 @@
-import styled from "styled-components";
 import { Header } from "../../components/Header/Header";
 import { GlobalContext } from "../../context/GlobalContext";
 import { useContext } from "react";
-
+import MultiActionAreaCard from "../../components/Card/Card";
+import { MainProjectContainer } from "./Projects.style";
 
 export const ProjectsPage: React.FC = () => {
   const { toggleTheme } = useContext(GlobalContext);
 
-  const PColor = styled.div`
-    color: #fff;
-    font-size: 40px;
-  `;
-
   return (
     <>
       <Header toggleTheme={toggleTheme} />
-      <PColor> ok </PColor>
+      <MainProjectContainer>
+        <MultiActionAreaCard />
+      </MainProjectContainer>
     </>
   );
 };
