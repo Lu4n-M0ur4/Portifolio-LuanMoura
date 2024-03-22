@@ -48,5 +48,6 @@ export const Secction2 = styled.div`
     flex-direction: row;
     gap: 48px;
     list-style-type: none;
+
   }
 `;

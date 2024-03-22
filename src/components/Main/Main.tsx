@@ -6,9 +6,12 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { DefaultTheme } from "styled-components/dist/types";
 import { ThemeContext } from "styled-components";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+import { useNavigate } from "react-router-dom";
 
 export const Main: React.FC = () => {
   const theme = useContext<DefaultTheme | undefined>(ThemeContext);
+
+  const navigate = useNavigate();
 
   const [greetingPhrase] = useTypewriter({
     words: ["me chamo Luan Moura", "sejam bem-vindos!"],
@@ -33,8 +36,9 @@ export const Main: React.FC = () => {
             <Cursor cursorColor={theme.colors.text} cursorStyle="C" />K
           </h1>
 
-          <button>
-            Ver meu Portifólio <ArrowOutwardIcon />
+          <button onClick={() => navigate("/Projetos")}>
+            Ver meu Portifólio
+            <ArrowOutwardIcon />
           </button>
         </article>
         <div>

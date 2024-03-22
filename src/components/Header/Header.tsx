@@ -8,8 +8,9 @@ import Brightness5Icon from "@mui/icons-material/Brightness5";
 import { shade } from "polished";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import logoDark from "../../assets/logoDark.png"
-import logoLigth from '../../assets/logoLigth.png'
+import logoDark from "../../assets/logoDark.png";
+import logoLigth from "../../assets/logoLigth.png";
+import { Link } from "react-router-dom";
 
 interface Props {
   toggleTheme(): void;
@@ -27,16 +28,68 @@ export const Header: React.FC<Props> = ({ toggleTheme }) => {
   return (
     <HeaderContainer>
       <Secction1>
-        <img src={theme.title === 'dark' ? logoDark : logoLigth} alt="" />
+        <img src={theme.title === "dark" ? logoDark : logoLigth} alt="" />
       </Secction1>
 
       <Secction2>
         <div>
           <ul>
-            <li>Home</li>
-            <li>Projects</li>
-            <li>About</li>
-            <li>Contacts</li>
+            <li>
+              <Link
+                to={"/"}
+                style={{
+                  textDecoration: "none",
+                  color:
+                    theme.title === "dark"
+                      ? theme.colors.primary
+                      : theme.colors.secondary,
+                }}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"/Projetos"}
+                style={{
+                  textDecoration: "none",
+                  color:
+                    theme.title === "dark"
+                      ? theme.colors.primary
+                      : theme.colors.secondary,
+                }}
+              >
+                Projetos
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"/Sobre"}
+                style={{
+                  textDecoration: "none",
+                  color:
+                    theme.title === "dark"
+                      ? theme.colors.primary
+                      : theme.colors.secondary,
+                }}
+              >
+                Sobre
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"/Contato"}
+                style={{
+                  textDecoration: "none",
+                  color:
+                    theme.title === "dark"
+                      ? theme.colors.primary
+                      : theme.colors.secondary,
+                }}
+              >
+                Contato
+              </Link>
+            </li>
           </ul>
         </div>
         {"|"}

@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {HomePage} from "../pages/home/HomePage"
-import { Projects } from "../pages/projects/Projects";
+import { ContactPage } from "../pages/contato/ContactPage";
+import { AboutPage } from "../pages/about/AboutPage";
+import { ProjectsPage } from "../pages/projects/ProjectsPage";
 
 
 export const Router:React.FC = () => {
@@ -9,8 +11,10 @@ export const Router:React.FC = () => {
   <BrowserRouter>
   <Routes>
     <Route index element={<HomePage/>}/>
-    <Route path="/HomePage" element={<HomePage/>}/>
-    <Route path="/Projects" element={<Projects/>}/>
+    <Route path="/" element={<HomePage/>}/>
+    <Route path="/Projetos" element={<ProjectsPage/>}/>
+    <Route path="/Sobre" element={<AboutPage/>}/>
+    <Route path="/Contato" element={<ContactPage/>}/>
   </Routes>
   
   </BrowserRouter>
