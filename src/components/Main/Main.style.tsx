@@ -50,13 +50,27 @@ export const MainContainer = styled.div`
     align-items: flex-end;
     justify-content: space-around;
     width: 50%;
-
+    padding-bottom: 20px;
     animation: personImg 1.4s 0.2s backwards;
 
     img {
       width: auto;
       height: 75%;
       backdrop-filter: brightness(#fff 120%);
+      border-radius: 50%;
+      padding-top:-4px;
+      border-bottom: #000000f6 solid 1.5px ;
+      background-image: linear-gradient(90deg,#9572FC  0%,
+    #43b6e7  50.52%,
+    #5c80e2  100% );
+    
+  
+
+      /* -webkit-filter: blur(10px); */
+    /* -moz-filter: blur(10px); */
+    /* -o-filter: blur(10px); */
+    /* -ms-filter: blur(10px); */
+    /* filter: blur(10px); */
     }
   }
 
