@@ -7,7 +7,7 @@ export const HeaderContainer = styled.div`
 
   width: 100%;
   height: 100px;
- 
+
   color: ${(props) => props.theme.colors.text};
   font-family: sans-serif;
   font-size: 20px;
@@ -19,16 +19,10 @@ export const Secction1 = styled.div`
   align-items: flex-end;
   justify-content: center;
 
-  img{
-   width:  300px;
-padding-left: 32px;
-  
+  img {
+    width: 300px;
+    padding-left: 32px;
   }
-
-  a{
- text-decoration: none;
-  }
-  
 `;
 
 export const Secction2 = styled.div`
@@ -52,6 +46,13 @@ export const Secction2 = styled.div`
     flex-direction: row;
     gap: 48px;
     list-style-type: none;
+  }
 
+  a {
+    transition: transform 0.3s;
+  }
+
+  a:hover {
+    transform: scale(1.25);
   }
 `;
