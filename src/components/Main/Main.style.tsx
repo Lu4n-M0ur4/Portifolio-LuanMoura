@@ -58,19 +58,12 @@ export const MainContainer = styled.div`
       height: 75%;
       backdrop-filter: brightness(#fff 120%);
       border-radius: 50%;
-      padding-top:-4px;
-      border-bottom: #000000f6 solid 1.5px ;
-      background-image: linear-gradient(90deg,#9572FC  0%,
-    #43b6e7  50.52%,
-    #5c80e2  100% );
-    
-  
-
-      /* -webkit-filter: blur(10px); */
-    /* -moz-filter: blur(10px); */
-    /* -o-filter: blur(10px); */
-    /* -ms-filter: blur(10px); */
-    /* filter: blur(10px); */
+      padding-top: -4px;
+      border-bottom: #000000f6 solid 1.5px;
+      background-image: ${(props) =>
+        props.theme.title === "dark"
+          ? "linear-gradient(90deg,#C8C8C8  0%,#547AA5  50.52%,#242325 100% )"
+          : "linear-gradient(90deg,#242325  0%,#C4D7F2  50.52%,#C4D7F2 100% )"};
     }
   }
 

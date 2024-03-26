@@ -24,6 +24,10 @@ export const Secction1 = styled.div`
 padding-left: 32px;
   
   }
+
+  a{
+ text-decoration: none;
+  }
   
 `;
 

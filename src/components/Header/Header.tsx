@@ -10,7 +10,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import logoDark from "../../assets/logoDark.png";
 import logoLigth from "../../assets/logoLigth.png";
-import { Link } from "react-router-dom";
+import { Link, NavigateFunction, useNavigate } from "react-router-dom";
 
 interface Props {
   toggleTheme(): void;
@@ -18,6 +18,8 @@ interface Props {
 
 export const Header: React.FC<Props> = ({ toggleTheme }) => {
   const theme = useContext<DefaultTheme | undefined>(ThemeContext);
+
+  const navigate: NavigateFunction = useNavigate();
 
   if (!theme) {
     return null;
@@ -28,7 +30,11 @@ export const Header: React.FC<Props> = ({ toggleTheme }) => {
   return (
     <HeaderContainer>
       <Secction1>
-        <img src={theme.title === "dark" ? logoDark : logoLigth} alt="" />
+        <img
+          src={theme.title === "dark" ? logoDark : logoLigth}
+          alt="Logo WebSolution"
+          onClick={() => navigate("/")}
+        />
       </Secction1>
 
       <Secction2>
@@ -94,8 +100,32 @@ export const Header: React.FC<Props> = ({ toggleTheme }) => {
         </div>
         {"|"}
         <div>
-          <LinkedInIcon />
-          <GitHubIcon />
+          <a
+            href="https://www.linkedin.com/in/luanmoura/"
+            style={{
+              color:
+                theme.title === "dark"
+                  ? theme.colors.primary
+                  : theme.colors.secondary,
+            }}
+            target="_blank"
+          >
+            {" "}
+            <LinkedInIcon />
+          </a>
+          <a
+            href="https://github.com/Lu4n-M0ur4"
+            style={{
+              color:
+                theme.title === "dark"
+                  ? theme.colors.primary
+                  : theme.colors.secondary,
+            }}
+            target="_blank"
+          >
+            {" "}
+            <GitHubIcon />
+          </a>
         </div>
         {"|"}
         <div>
