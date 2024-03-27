@@ -5,11 +5,9 @@ interface ThemeProps {
   theme: DefaultTheme;
 }
 
-
-
 export const CardContainer = styled(Box)`
   width: 90vw;
-  height: calc(100% - 200px);
+  height: calc(100vh - 200px);
   gap: 50px;
   display: flex;
   justify-content: center;
@@ -17,14 +15,32 @@ export const CardContainer = styled(Box)`
   flex-wrap: wrap;
 `;
 
-export const StyledCardMedia = styled(Card)({
+export const StyledCardMedia = styled(Card)(
+  {
   transition: "transform 0.3s",
   "&:hover": {
     transform: "scale(1.03)",
   },
 });
+
+export const BoxTabs = styled(Box)`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const BoxCustom = styled(Box)`
-  ${(props:ThemeProps) =>
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+
+  ${(props: ThemeProps) =>
     props?.theme?.title === "dark"
       ? css`
           .Mui-selected {
