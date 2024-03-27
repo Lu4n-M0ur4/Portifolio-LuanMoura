@@ -23,21 +23,28 @@ import { shade } from "polished";
 
 export default function MultiActionAreaCard() {
   const theme = useContext<DefaultTheme | undefined>(ThemeContext);
-  const [projectData, setProjectData] = useState([]);
+  const [projectFData, setProjectFData] = useState([]);
+  const [projectBData, setProjectBData] = useState([]);
   const [value, setValue] = useState(0);
 
-  useEffect(() => {
-    axios
-      .get("https://api.github.com/users/Lu4n-M0ur4/repos?per_page=100")
-      .then((res) =>
-        setProjectData(
-          res.data.filter((r: any) => r.homepage != null && r.homepage != "")
-        )
-      );
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("https://api.github.com/users/Lu4n-M0ur4/repos?per_page=100")
+  //     .then((res) =>
+  //       setProjectFData(
+  //         res.data.filter((r: any) => r.homepage != null && r.homepage != "")
+  //       )
+  //     );
+  // }, []);
 
+  console.log(projectBData);
   
-console.log(projectData)
+
+  // useEffect(() => {
+  //   axios
+  //     .get("https://api.github.com/users/Lu4n-M0ur4/repos?per_page=100")
+  //     .then((res) => setProjectBData(res.data));
+  // }, []);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -73,281 +80,98 @@ console.log(projectData)
       </BoxTabs>
       {value === 0 ? (
         <CardContainer>
-          <StyledCardMedia sx={{ maxWidth: 500 }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image="https://picsum.photos/200"
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Lizard
-                </Typography>
-                <Typography variant="body2" color={"text.secondary"}>
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions
-              sx={{
-                background:
-                  theme?.title === "dark"
-                    ? theme.colors.secondary
-                    : theme?.colors.background,
-              }}
-            >
-              <Button
-                size="small"
-                sx={{
-                  color:
-                    theme?.title === "dark"
-                      ? theme.colors.primary
-                      : theme?.colors.secondary,
-                }}
-              >
-                Deploy!
-              </Button>
-            </CardActions>
-          </StyledCardMedia>
-          <StyledCardMedia sx={{ maxWidth: 500 }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image="https://picsum.photos/201"
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Lizard
-                </Typography>
-                <Typography variant="body2" color={"text.secondary"}>
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions
-              sx={{
-                background:
-                  theme?.title === "dark"
-                    ? theme.colors.secondary
-                    : theme?.colors.background,
-              }}
-            >
-              <Button
-                size="small"
-                sx={{
-                  color:
-                    theme?.title === "dark"
-                      ? theme.colors.primary
-                      : theme?.colors.secondary,
-                }}
-              >
-                Deploy!
-              </Button>
-            </CardActions>
-          </StyledCardMedia>
-          <StyledCardMedia sx={{ maxWidth: 500 }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image="https://picsum.photos/204"
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Lizard
-                </Typography>
-                <Typography variant="body2" color={"text.secondary"}>
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions
-              sx={{
-                background:
-                  theme?.title === "dark"
-                    ? theme.colors.secondary
-                    : theme?.colors.background,
-              }}
-            >
-              <Button
-                size="small"
-                sx={{
-                  color:
-                    theme?.title === "dark"
-                      ? theme.colors.primary
-                      : theme?.colors.secondary,
-                }}
-              >
-                Deploy!
-              </Button>
-            </CardActions>
-          </StyledCardMedia>
-          <StyledCardMedia sx={{ maxWidth: 500 }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image="https://picsum.photos/205"
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Lizard
-                </Typography>
-                <Typography variant="body2" color={"text.secondary"}>
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions
-              sx={{
-                background:
-                  theme?.title === "dark"
-                    ? theme.colors.secondary
-                    : theme?.colors.background,
-              }}
-            >
-              <Button
-                size="small"
-                sx={{
-                  color:
-                    theme?.title === "dark"
-                      ? theme.colors.primary
-                      : theme?.colors.secondary,
-                }}
-              >
-                Deploy!
-              </Button>
-            </CardActions>
-          </StyledCardMedia>
-          <StyledCardMedia sx={{ maxWidth: 500 }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image="https://picsum.photos/200"
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Lizard
-                </Typography>
-                <Typography variant="body2" color={"text.secondary"}>
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions
-              sx={{
-                background:
-                  theme?.title === "dark"
-                    ? theme.colors.secondary
-                    : theme?.colors.background,
-              }}
-            >
-              <Button
-                size="small"
-                sx={{
-                  color:
-                    theme?.title === "dark"
-                      ? theme.colors.primary
-                      : theme?.colors.secondary,
-                }}
-              >
-                Deploy!
-              </Button>
-            </CardActions>
-          </StyledCardMedia>
-          <StyledCardMedia sx={{ maxWidth: 500 }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image="https://picsum.photos/206"
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Lizard
-                </Typography>
-                <Typography variant="body2" color={"text.secondary"}>
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions
-              sx={{
-                background:
-                  theme?.title === "dark"
-                    ? theme.colors.secondary
-                    : theme?.colors.background,
-              }}
-            >
-              <Button
-                size="small"
-                sx={{
-                  color:
-                    theme?.title === "dark"
-                      ? theme.colors.primary
-                      : theme?.colors.secondary,
-                }}
-              >
-                Deploy!
-              </Button>
-            </CardActions>
-          </StyledCardMedia>
+          {projectFData?.map((p) => (
+            <>
+              <StyledCardMedia sx={{ maxWidth: 500 }}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="140"
+                    image="https://picsum.photos/200"
+                    alt="green iguana"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      Lizard
+                    </Typography>
+                    <Typography variant="body2" color={"text.secondary"}>
+                      Lizards are a widespread group of squamate reptiles, with
+                      over 6,000 species, ranging across all continents except
+                      Antarctica
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions
+                  sx={{
+                    background:
+                      theme?.title === "dark"
+                        ? theme.colors.secondary
+                        : theme?.colors.background,
+                  }}
+                >
+                  <Button
+                    size="small"
+                    sx={{
+                      color:
+                        theme?.title === "dark"
+                          ? theme.colors.primary
+                          : theme?.colors.secondary,
+                    }}
+                  >
+                    Deploy!
+                  </Button>
+                </CardActions>
+              </StyledCardMedia>
+            </>
+          ))}
         </CardContainer>
       ) : (
-        <StyledCardMedia sx={{ maxWidth: 500 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image="https://picsum.photos/200"
-              alt="green iguana"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Lizard
-              </Typography>
-              <Typography variant="body2" color={"text.secondary"}>
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions
-            sx={{
-              background:
-                theme?.title === "dark"
-                  ? theme.colors.secondary
-                  : theme?.colors.background,
-            }}
-          >
-            <Button
-              size="small"
-              sx={{
-                color:
-                  theme?.title === "dark"
-                    ? theme.colors.primary
-                    : theme?.colors.secondary,
-              }}
-            >
-              Deploy!
-            </Button>
-          </CardActions>
-        </StyledCardMedia>
+        <CardContainer>
+          {projectBData?.map((p) => (
+            <>
+              <StyledCardMedia sx={{ maxWidth: 500 }}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="140"
+                    image="https://picsum.photos/200"
+                    alt="green iguana"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      Lizard
+                    </Typography>
+                    <Typography variant="body2" color={"text.secondary"}>
+                      Lizards are a widespread group of squamate reptiles, with
+                      over 6,000 species, ranging across all continents except
+                      Antarctica
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions
+                  sx={{
+                    background:
+                      theme?.title === "dark"
+                        ? theme.colors.secondary
+                        : theme?.colors.background,
+                  }}
+                >
+                  <Button
+                    size="small"
+                    sx={{
+                      color:
+                        theme?.title === "dark"
+                          ? theme.colors.primary
+                          : theme?.colors.secondary,
+                    }}
+                  >
+                    Deploy!
+                  </Button>
+                </CardActions>
+              </StyledCardMedia>
+            </>
+          ))}
+        </CardContainer>
       )}
     </BoxCustom>
   );

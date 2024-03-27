@@ -33,7 +33,7 @@ export const BoxTabs = styled(Box)`
 export const BoxCustom = styled(Box)`
   width: 100%;
   height: 100%;
-  padding-top: 10px;
+  /* padding-top: 10px; */
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -14,10 +14,12 @@ export const HeaderContainer = styled.div`
 `;
 export const Secction1 = styled.div`
   width: 400px;
-  height: 100px;
+
   display: flex;
-  align-items: flex-end;
+  align-items:center;
   justify-content: center;
+  
+    margin: 32px 0px 0px 0px;
 
   img {
     width: 300px;
