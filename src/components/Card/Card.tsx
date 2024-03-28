@@ -29,7 +29,7 @@ export default function MultiActionAreaCard() {
 
   // useEffect(() => {
   //   axios
-  //     .get("https://api.github.com/users/Lu4n-M0ur4/repos?per_page=100")
+  //     .get("https://api.github.com/users/Lu4n-M0ur4/repos?per_page=103")
   //     .then((res) =>
   //       setProjectFData(
   //         res.data.filter((r: any) => r.homepage != null && r.homepage != "")
@@ -40,11 +40,11 @@ export default function MultiActionAreaCard() {
   console.log(projectBData);
   
 
-  // useEffect(() => {
-  //   axios
-  //     .get("https://api.github.com/users/Lu4n-M0ur4/repos?per_page=100")
-  //     .then((res) => setProjectBData(res.data));
-  // }, []);
+  useEffect(() => {
+    axios
+      .get("https://api.github.com/users/Lu4n-M0ur4/repos?per_page=200")
+      .then((res) => setProjectBData(res.data.filter((r:any)=>r.language === 'TypeScript' && r.description )));
+  }, []);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
