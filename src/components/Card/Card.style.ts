@@ -1,4 +1,5 @@
 import { Box, Card, css, styled } from "@mui/material";
+
 import { DefaultTheme } from "styled-components/dist/types";
 
 interface ThemeProps {
@@ -15,13 +16,15 @@ export const CardContainer = styled(Box)`
   flex-wrap: wrap;
 `;
 
-export const StyledCardMedia = styled(Card)(
-  {
-  transition: "transform 0.3s",
-  "&:hover": {
-    transform: "scale(1.03)",
-  },
-});
+export const StyledCardMedia = styled(Card)`
+
+  transition: transform 0.3s;
+
+  &:hover{
+    transform: scale(1.08 );
+  }
+
+`;
 
 export const BoxTabs = styled(Box)`
   width: 100%;

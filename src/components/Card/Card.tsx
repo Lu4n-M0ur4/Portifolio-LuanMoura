@@ -27,24 +27,23 @@ export default function MultiActionAreaCard() {
   const [projectBData, setProjectBData] = useState([]);
   const [value, setValue] = useState(0);
 
-  // useEffect(() => {
-  //   axios
-  //     .get("https://api.github.com/users/Lu4n-M0ur4/repos?per_page=103")
-  //     .then((res) =>
-  //       setProjectFData(
-  //         res.data.filter((r: any) => r.homepage != null && r.homepage != "")
-  //       )
-  //     );
-  // }, []);
-
-  console.log(projectBData);
-  
-
   useEffect(() => {
     axios
-      .get("https://api.github.com/users/Lu4n-M0ur4/repos?per_page=200")
-      .then((res) => setProjectBData(res.data.filter((r:any)=>r.language === 'TypeScript' && r.description )));
+      .get("https://api.github.com/users/Lu4n-M0ur4/repos?per_page=103")
+      .then((res) =>
+        setProjectFData(
+          res.data.filter((r: any) => r.homepage != null && r.homepage != "")
+        )
+      );
   }, []);
+
+  console.log(projectFData);
+
+  // useEffect(() => {
+  //   axios
+  //     .get("https://api.github.com/users/Lu4n-M0ur4/repos?per_page=200")
+  //     .then((res) => setProjectBData(res.data.filter((r:any)=>r.language === 'TypeScript' && r.description )));
+  // }, []);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -87,17 +86,15 @@ export default function MultiActionAreaCard() {
                   <CardMedia
                     component="img"
                     height="140"
-                    image="https://picsum.photos/200"
-                    alt="green iguana"
+                    image={p?.description}
+                    alt={p?.name}
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                      Lizard
+                      {p?.name}
                     </Typography>
                     <Typography variant="body2" color={"text.secondary"}>
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
+                      {`Projeto desenvolvido com ${p.language} interativo com práticas de acessibilidade e utilização e UI/UX, criado em ${p.created_at} e última modificação sofrida em ${p.updated_at}. `}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -110,6 +107,8 @@ export default function MultiActionAreaCard() {
                   }}
                 >
                   <Button
+                    href={p.homepage}
+                    target="_blank"
                     size="small"
                     sx={{
                       color:
