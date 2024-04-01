@@ -37,13 +37,12 @@ export default function MultiActionAreaCard() {
       );
   }, []);
 
-  console.log(projectFData);
 
-  // useEffect(() => {
-  //   axios
-  //     .get("https://api.github.com/users/Lu4n-M0ur4/repos?per_page=200")
-  //     .then((res) => setProjectBData(res.data.filter((r:any)=>r.language === 'TypeScript' && r.description )));
-  // }, []);
+  useEffect(() => {
+    axios
+      .get("https://api.github.com/users/Lu4n-M0ur4/repos?per_page=200")
+      .then((res) => setProjectBData(res.data.filter((r:any)=>r.language === 'TypeScript' && r.description )));
+  }, []);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -81,7 +80,10 @@ export default function MultiActionAreaCard() {
         <CardContainer>
           {projectFData?.map((p) => (
             <>
-              <StyledCardMedia sx={{ maxWidth: 500 }}>
+              <StyledCardMedia
+                sx={{ maxWidth: 500 }}
+                theme={theme as Theme & DefaultTheme}
+              >
                 <CardActionArea>
                   <CardMedia
                     component="img"
@@ -128,22 +130,23 @@ export default function MultiActionAreaCard() {
         <CardContainer>
           {projectBData?.map((p) => (
             <>
-              <StyledCardMedia sx={{ maxWidth: 500 }}>
+              <StyledCardMedia
+                sx={{ maxWidth: 500 }}
+                theme={theme as Theme & DefaultTheme}
+              >
                 <CardActionArea>
                   <CardMedia
                     component="img"
                     height="140"
-                    image="https://picsum.photos/200"
-                    alt="green iguana"
+                    image={p?.description}
+                    alt={p?.name}
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                      Lizard
+                      {p?.name}
                     </Typography>
                     <Typography variant="body2" color={"text.secondary"}>
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
+                      {`Projeto desenvolvido com ${p.language} interativo com práticas de acessibilidade e utilização e UI/UX, criado em ${p.created_at} e última modificação sofrida em ${p.updated_at}. `}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -156,6 +159,8 @@ export default function MultiActionAreaCard() {
                   }}
                 >
                   <Button
+                    href={p.homepage}
+                    target="_blank"
                     size="small"
                     sx={{
                       color:

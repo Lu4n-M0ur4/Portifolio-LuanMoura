@@ -17,13 +17,20 @@ export const CardContainer = styled(Box)`
 `;
 
 export const StyledCardMedia = styled(Card)`
+  ${(props: ThemeProps) =>
+    props?.theme?.title === "dark"
+      ? css`
+          box-shadow: rgba(158, 172, 172, 0.19) 0px 22px 70px 4px;
+        `
+      : css`
+          box-shadow: rgba(149, 149, 149, 6.9) 0px 22px 70px 4px;
+        `};
 
   transition: transform 0.3s;
 
-  &:hover{
-    transform: scale(1.08 );
+  &:hover {
+    transform: scale(1.08);
   }
-
 `;
 
 export const BoxTabs = styled(Box)`

@@ -56,6 +56,7 @@ export const MainContainer = styled.div`
     img {
       width: auto;
       height: 75%;
+
       backdrop-filter: brightness(#fff 120%);
       border-radius: 50%;
       padding-top: -4px;
