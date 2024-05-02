@@ -4,7 +4,7 @@ import { HomePage } from "../pages/home/HomePage";
 import { ContactPage } from "../pages/contato/ContactPage";
 import { AboutPage } from "../pages/about/AboutPage";
 import { ProjectsPage } from "../pages/projects/ProjectsPage";
-import { LayoutNotPage } from "../pages/layoutNot/LayoutNotPage";
+
 
 export const Router: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ export const Router: React.FC = () => {
           <Route path="/Projetos" element={<ProjectsPage />} />
           <Route path="/Sobre" element={<AboutPage />} />
           <Route path="/Contato" element={<ContactPage />} />
-          {/* <Route path="/FailLayout" element={<LayoutNotPage />} /> */}
+  
         </Routes>
       </BrowserRouter>
     </>

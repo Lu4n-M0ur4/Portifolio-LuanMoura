@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { Box, Divider, Theme, colors } from "@mui/material";
+import { Box, Theme  } from "@mui/material";
 import {
   AboutContainer,
   BoxContent,
