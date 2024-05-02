@@ -50,7 +50,7 @@ export const Contato = () => {
     Phone: form.phone,
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setForm({
       name: "",
@@ -69,10 +69,10 @@ export const Contato = () => {
       )
       .then((res) => {
         console.log("email enviado", res.status, res.text);
-      }),
-      (err) => {
+      })
+      .catch((err) => {
         console.log("ERRO", err);
-      };
+      });
   };
 
 
