@@ -124,7 +124,7 @@ export default function MultiActionAreaCard() {
                   }}
                 >
                   <Button
-                    href={p.homepage}
+                    href={p.homepage || ""}
                     target="_blank"
                     size="small"
                     sx={{
@@ -174,7 +174,7 @@ export default function MultiActionAreaCard() {
                   }}
                 >
                   <Button
-                    href={p.homepage}
+                    href={p.homepage || ""}
                     target="_blank"
                     size="small"
                     sx={{
