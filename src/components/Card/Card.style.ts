@@ -14,6 +14,15 @@ export const CardContainer = styled(Box)`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+
+
+  @media (max-width: 1221px) {
+   
+    margin: 0px;
+    height: 100%;
+    padding-bottom: 160px;
+    
+  }
 `;
 
 export const StyledCardMedia = styled(Card)`

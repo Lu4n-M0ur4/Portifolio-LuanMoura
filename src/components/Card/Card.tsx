@@ -96,7 +96,7 @@ export default function MultiActionAreaCard() {
                       {p?.name}
                     </Typography>
                     <Typography variant="body2" color={"text.secondary"}>
-                      {`Projeto desenvolvido com ${p.language} interativo com práticas de acessibilidade e utilização e UI/UX, criado em ${p.created_at} e última modificação sofrida em ${p.updated_at}. `}
+                      {`Projeto desenvolvido com ${p.language} interativo com práticas de acessibilidade e utilização e UI/UX, criado em ${p.created_at.slice(0,10)} e última modificação sofrida em ${p.updated_at.slice(0,10)}. `}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -146,7 +146,7 @@ export default function MultiActionAreaCard() {
                       {p?.name}
                     </Typography>
                     <Typography variant="body2" color={"text.secondary"}>
-                      {`Projeto desenvolvido com ${p.language} interativo com práticas de acessibilidade e utilização e UI/UX, criado em ${p.created_at} e última modificação sofrida em ${p.updated_at}. `}
+                      {`Projeto desenvolvido com ${p?.language} interativo com práticas de acessibilidade e utilização de arquitetura, criado em ${p?.created_at?.slice(0,10)} e última modificação sofrida em ${p.updated_at.slice(0,10)}. `}
                     </Typography>
                   </CardContent>
                 </CardActionArea>

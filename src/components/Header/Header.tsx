@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Switch from "react-switch";
-import { HeaderContainer, Secction2, Secction1 } from "./Header.style";
+import { HeaderContainer, Secction2, Secction1, ImgLogo2, ImgLogo1 } from "./Header.style";
 import { DefaultTheme, ThemeContext } from "styled-components";
 import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
 import Brightness5Icon from "@mui/icons-material/Brightness5";
@@ -10,6 +10,9 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import logoDark from "../../assets/logoDark.png";
 import logoLigth from "../../assets/logoLigth.png";
+import logoMiniDark from "../../assets/imgLonelyBlack.jpg.png"
+import logoMiniWhite from "../../assets/imgLonelyWhite.jpg.png"
+
 import { Link, NavigateFunction, useNavigate } from "react-router-dom";
 
 interface Props {
@@ -30,8 +33,14 @@ export const Header: React.FC<Props> = ({ toggleTheme }) => {
   return (
     <HeaderContainer>
       <Secction1>
-        <img
+        <ImgLogo1
           src={theme.title === "dark" ? logoDark : logoLigth}
+          alt="Logo WebSolution"
+          onClick={() => navigate("/")}
+        />
+        <ImgLogo2
+    
+          src={theme.title === "dark" ? logoMiniWhite : logoMiniDark}
           alt="Logo WebSolution"
           onClick={() => navigate("/")}
         />

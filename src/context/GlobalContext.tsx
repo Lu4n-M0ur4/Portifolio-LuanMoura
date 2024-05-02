@@ -10,19 +10,23 @@ export type UserProps = {
 export type authContextProps = {
   toggleTheme: () => void;
   theme: DefaultTheme;
+
 };
 
 const GlobalContext = createContext<authContextProps>({} as authContextProps);
 
 const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = useState(dark);
+  const [theme, setTheme] = useState(ligth);
 
   const toggleTheme = () => {
     setTheme(theme.title === "light" ? dark : ligth);
   };
 
+
+
+
   return (
-    <GlobalContext.Provider value={{ theme, toggleTheme }}>
+    <GlobalContext.Provider value={{ theme, toggleTheme, }}>
       <>{children}</>
     </GlobalContext.Provider>
   );
