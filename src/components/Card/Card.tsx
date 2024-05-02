@@ -56,7 +56,7 @@ export default function MultiActionAreaCard() {
       .then((res) => setProjectBData(res.data.filter((r)=>r.language === 'TypeScript' && r.description )));
   }, []);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
 
