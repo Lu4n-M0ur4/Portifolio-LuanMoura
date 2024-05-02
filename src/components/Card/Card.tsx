@@ -53,7 +53,7 @@ export default function MultiActionAreaCard() {
   useEffect(() => {
     axios
       .get<Project[]>("https://api.github.com/users/Lu4n-M0ur4/repos?per_page=200")
-      .then((res) => setProjectBData(res.data.filter((r)=>r.language === 'TypeScript' && r.description )));
+      .then((res) => setProjectBData(res.data.filter((r)=>r.language === 'TypeScript' && r.description && r.name !== "Portifolio-LuanMoura" )));
   }, []);
 
   const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
