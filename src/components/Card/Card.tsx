@@ -21,18 +21,30 @@ import { ThemeContext } from "styled-components";
 import axios from "axios";
 import { shade } from "polished";
 
+
+type Project = {
+  name?: string | undefined;
+  description?: string  | undefined;
+  language?: string | undefined;
+  created_at?: string | undefined;
+  updated_at?: string | undefined;
+  homepage: string | undefined;
+};
+
+
 export default function MultiActionAreaCard() {
   const theme = useContext<DefaultTheme | undefined>(ThemeContext);
-  const [projectFData, setProjectFData] = useState([]);
-  const [projectBData, setProjectBData] = useState([]);
+  const [projectFData, setProjectFData] = useState<Project[]>([]);
+  const [projectBData, setProjectBData] = useState<Project[]>([]);
   const [value, setValue] = useState(0);
+
 
   useEffect(() => {
     axios
-      .get("https://api.github.com/users/Lu4n-M0ur4/repos?per_page=103")
+      .get<Project[]>("https://api.github.com/users/Lu4n-M0ur4/repos?per_page=103")
       .then((res) =>
         setProjectFData(
-          res.data.filter((r: any) => r.homepage != null && r.homepage != "")
+          res.data.filter((r) => r.homepage != null && r.homepage != "")
         )
       );
   }, []);
@@ -40,13 +52,16 @@ export default function MultiActionAreaCard() {
 
   useEffect(() => {
     axios
-      .get("https://api.github.com/users/Lu4n-M0ur4/repos?per_page=200")
-      .then((res) => setProjectBData(res.data.filter((r:any)=>r.language === 'TypeScript' && r.description )));
+      .get<Project[]>("https://api.github.com/users/Lu4n-M0ur4/repos?per_page=200")
+      .then((res) => setProjectBData(res.data.filter((r)=>r.language === 'TypeScript' && r.description )));
   }, []);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
+
+
+
 
   return (
     <BoxCustom theme={theme as Theme & DefaultTheme}>
@@ -96,7 +111,7 @@ export default function MultiActionAreaCard() {
                       {p?.name}
                     </Typography>
                     <Typography variant="body2" color={"text.secondary"}>
-                      {`Projeto desenvolvido com ${p.language} interativo com práticas de acessibilidade e utilização e UI/UX, criado em ${p.created_at.slice(0,10)} e última modificação sofrida em ${p.updated_at.slice(0,10)}. `}
+                      {`Projeto desenvolvido com ${p.language} interativo com práticas de acessibilidade e utilização e UI/UX, criado em ${p?.created_at?.slice(0,10)} e última modificação sofrida em ${p?.updated_at?.slice(0,10)}. `}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -146,7 +161,7 @@ export default function MultiActionAreaCard() {
                       {p?.name}
                     </Typography>
                     <Typography variant="body2" color={"text.secondary"}>
-                      {`Projeto desenvolvido com ${p?.language} interativo com práticas de acessibilidade e utilização de arquitetura, criado em ${p?.created_at?.slice(0,10)} e última modificação sofrida em ${p.updated_at.slice(0,10)}. `}
+                      {`Projeto desenvolvido com ${p?.language} interativo com práticas de acessibilidade e utilização de arquitetura, criado em ${p?.created_at?.slice(0,10)} e última modificação sofrida em ${p?.updated_at?.slice(0,10)}. `}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
