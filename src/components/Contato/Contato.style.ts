@@ -147,13 +147,13 @@ export const FormInputMessage = styled(TextField)`
   ${(props: ThemeProps) =>
     props?.theme?.title === "dark"
       ? css`
-          .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
-            border: solid 1px ${props?.theme?.colors?.text};
+          .MuiOutlinedInput-notchedOutline {
+            border: solid 1px ${props?.theme?.colors?.text}!important;
           }
         `
       : css`
-          .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
-            border: solid 1px ${props?.theme?.colors?.text};
+          .MuiOutlinedInput-notchedOutline {
+            border: solid 1px ${props?.theme?.colors?.text}!important;
           }
         `}
 `;
@@ -166,23 +166,23 @@ export const FormInputs = styled(TextField)`
     ${(props: ThemeProps) =>
       props?.theme?.title === "dark"
         ? css`
-            color: ${props?.theme?.colors?.primary};
+            color: ${props?.theme?.colors?.primary}!important;
           `
         : css`
-            color: ${props?.theme?.colors?.secondary};
+            color: ${props?.theme?.colors?.secondary}!important;
           `}
   }
 
   ${(props: ThemeProps) =>
     props?.theme?.title === "dark"
       ? css`
-          .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
-            border: solid 1px ${props?.theme?.colors?.text};
-          }
+          .MuiOutlinedInput-notchedOutline {
+            border: solid 1px ${props?.theme?.colors?.text}!important;
+          };
         `
       : css`
-          .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
-            border: solid 1px ${props?.theme?.colors?.text};
-          }
+          .MuiOutlinedInput-notchedOutline {
+            border: solid 1px ${props?.theme?.colors?.text}!important;
+          };
         `}
 `;
