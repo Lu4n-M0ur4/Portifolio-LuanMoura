@@ -1,20 +1,22 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
+  width: 100%;
+  height: calc(100% - 100px);
   display: flex;
   justify-content: space-between;
 
-  width: 100vw;
-  height: calc(100% - 100px);
   overflow: hidden;
 
   article {
-    margin: 168px 0 0 38px;
+    
+    height: 100%;
+    padding: 168px 0 0 38px;
     color: ${(props) => props.theme.colors.text};
 
     h1 {
-      width: 540px;
-      height: 192px;
+      max-width: 20%;
+      height: 20%;
       font-family: "Poppins", sans-serif;
       font-weight: 700;
       font-style: normal;
