@@ -128,10 +128,10 @@ export const FormContainer = styled(Box)`
 export const FormInputMessage = styled(TextField)`
   min-width: 500px;
   min-height: 100px;
-  input{
-  height: 200px;
-}
 
+  input {
+    height: 200px;
+  }
 
   label {
     ${(props: ThemeProps) =>
@@ -152,18 +152,16 @@ export const FormInputMessage = styled(TextField)`
           }
         `
       : css`
-           .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
-
-      border: solid 1px ${props?.theme?.colors?.text};
-          `}
-           }
+          .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+            border: solid 1px ${props?.theme?.colors?.text};
+          }
+        `}
 `;
 
 export const FormInputs = styled(TextField)`
   min-width: 500px;
   min-height: 100px;
 
-
   label {
     ${(props: ThemeProps) =>
       props?.theme?.title === "dark"
@@ -183,11 +181,8 @@ export const FormInputs = styled(TextField)`
           }
         `
       : css`
-           .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
-
-      border: solid 1px ${props?.theme?.colors?.text};
-          `}
-           }
-
-           
+          .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+            border: solid 1px ${props?.theme?.colors?.text};
+          }
+        `}
 `;

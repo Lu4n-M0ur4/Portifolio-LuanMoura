@@ -11,15 +11,16 @@ export const MainContainer = styled.div`
   article {
     
     height: 100%;
-    padding: 168px 0 0 38px;
+    padding: 75px 0 75px 75px;
     color: ${(props) => props.theme.colors.text};
 
     h1 {
       max-width: 20%;
-      height: 20%;
+      /* height: 20%; */
       font-family: "Poppins", sans-serif;
       font-weight: 700;
       font-style: normal;
+      margin: 0px;
 
       font-size: 96px;
       letter-spacing: 6px;
@@ -31,6 +32,7 @@ export const MainContainer = styled.div`
       font-family: "Poppins", sans-serif;
       font-weight: 300;
       font-size: 24px;
+      margin: 0px;
     }
 
     button {

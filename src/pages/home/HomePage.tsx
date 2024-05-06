@@ -28,6 +28,7 @@ export const HomePage = () => {
     </>
   ) : (
     <>
+    
       <Header toggleTheme={toggleTheme} />
       <Main />
     </>
