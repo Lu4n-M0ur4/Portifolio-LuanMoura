@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { Box, Theme  } from "@mui/material";
+import { Box, Theme } from "@mui/material";
 import {
   AboutContainer,
   BoxContent,
@@ -10,20 +10,17 @@ import {
 } from "./Sobre.style";
 
 import Brightness1Icon from "@mui/icons-material/Brightness1";
-import { useContext  } from "react";
+import { useContext } from "react";
 import { DefaultTheme } from "styled-components/dist/types";
 import { ThemeContext } from "styled-components";
-
 
 export default function Sobre() {
   const theme = useContext<DefaultTheme | undefined>(ThemeContext);
   if (!theme) {
     return null;
   }
-  
 
   return (
-
     <AboutContainer>
       <BoxContent>
         <SectionResume>
@@ -45,7 +42,7 @@ export default function Sobre() {
             />
           </HrContent>
           <TitleBox theme={theme as Theme & DefaultTheme}>
-            <Box fontSize={"32px"} marginTop={"-17px"}>
+            <Box fontSize={"32px"} marginTop={"-16px"}>
               <h1> Sobre mim</h1>
             </Box>
             <h3>
@@ -84,7 +81,7 @@ export default function Sobre() {
             ></DividerContent>
           </HrContent>
           <TitleBox theme={theme as Theme & DefaultTheme}>
-            <Box fontSize={"32px"} marginTop={"-13px"}>
+            <Box fontSize={"32px"} padding={"-13px"}>
               <h1>Formação</h1>
             </Box>
             <Box>
@@ -92,14 +89,21 @@ export default function Sobre() {
                 <li>
                   <h2> Estacio </h2>
                   <h3 style={{ fontWeight: "500" }}>Período 2023.1 - 2025.2</h3>
-                  <hr style={{ margin: "0" }} />
+                  <hr style={{ padding: "0" }} />
 
-                  <h3 style={{ marginTop: "5px" }}>
+                  <h3 style={{ padding: "5px" }}>
                     {" "}
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nihil eum pariatur architecto tempore iste blanditiis omnis
-                    dicta, voluptas, ea quibusdam officia nobis cumque earum
-                    natus repellendus aut nam cum quam.
+                    O Curso Superior em Ciência da Computação oferecido pela
+                    Universidade Estácio é uma jornada abrangente e dinâmica que
+                    proporciona aos alunos uma formação sólida e atualizada em
+                    diversas áreas da computação. Ao longo de 2 anos e 5 meses.
+                    Entre as habilidades aprendidas durante o curso estão: Entre
+                    as habilidades aprendidas durante o curso estão: Arquitetura
+                    de Computadores, Fundamentos de Redes de Computadores,
+                    Desenvolvimento Web em HTML5, CSS, JavaScript e PHP, Banco
+                    de Dados, Engenharia de Software, Sistemas Operacionais,
+                    Programação Orientada a Objetos em Java, Inteligência
+                    Artificial para Desenvolvedores.
                   </h3>
                 </li>
                 <br />
@@ -107,9 +111,9 @@ export default function Sobre() {
                 <li>
                   <h2>Labenu </h2>
                   <h3 style={{ fontWeight: "500" }}>Período 2023.1 - 2023.2</h3>
-                  <hr style={{ margin: "0" }} />
+                  <hr style={{ padding: "0" }} />
 
-                  <h3 style={{ marginTop: "5px" }}>
+                  <h3 style={{ padding: "5px" }}>
                     {" "}
                     Programa com mais de 1000 horas de experiência prática em
                     desenvolvimento Full-stack, guiadas por metodologias ágeis
@@ -125,9 +129,9 @@ export default function Sobre() {
                 <li>
                   <h2>Universidade Castelo Branco</h2>
                   <h3 style={{ fontWeight: "500" }}>Período 2016.1 - 2019.1</h3>
-                  <hr style={{ margin: "0" }} />
+                  <hr style={{ padding: "0" }} />
 
-                  <h3 style={{ marginTop: "5px" }}>
+                  <h3 style={{ padding: "5px" }}>
                     Formação voltada a adminsitração de empresas guiada com
                     metodologias ágeis para acelerar o desenvolvimento de soft's
                     skills. Dentre as matérias importantes para ter sucesso no
@@ -161,7 +165,7 @@ export default function Sobre() {
             />
           </HrContent>
           <TitleBox theme={theme as Theme & DefaultTheme}>
-            <Box fontSize={"32px"} marginTop={"-13px"}>
+            <Box fontSize={"32px"} padding={"-13px"}>
               <h1>Expêriencias</h1>
             </Box>
             <Box>
@@ -171,9 +175,9 @@ export default function Sobre() {
                   <h3 style={{ fontWeight: "500" }}>
                     Dev Freelance Período set de 2023 - Atual
                   </h3>
-                  <hr style={{ margin: "0" }} />
+                  <hr style={{ padding: "0" }} />
 
-                  <h3 style={{ marginTop: "5px" }}>
+                  <h3 style={{ padding: "5px" }}>
                     {" "}
                     Desenvolvimento de sites para pequenas empresas feitos de
                     forma freelance através de uma agência digital. Principais
@@ -191,9 +195,9 @@ export default function Sobre() {
                     Gerente administrativo - Período {">>"} nov de 2020 - abr de
                     2024
                   </h3>
-                  <hr style={{ margin: "0" }} />
+                  <hr style={{ padding: "0" }} />
 
-                  <h3 style={{ marginTop: "5px" }}>
+                  <h3 style={{ padding: "5px" }}>
                     Cargo de liderança gerenciando todo pessoal
                     administrativamente e operacional, controle de estoque e
                     manutenções preventivas, corretivas. Analise de consumo de
@@ -210,9 +214,9 @@ export default function Sobre() {
                     Atendimento ao Cliente - Período {">>"} fev de 2017 - mar de
                     2019
                   </h3>
-                  <hr style={{ margin: "0" }} />
+                  <hr style={{ padding: "0" }} />
 
-                  <h3 style={{ marginTop: "5px" }}>
+                  <h3 style={{ padding: "5px" }}>
                     {" "}
                     Atuando no setor de comunicação juntamente com vendas de
                     produtos relacionados a telecomunicação.
@@ -226,9 +230,9 @@ export default function Sobre() {
                     Assistente administrativo - Período {">>"} fev de 2014 / mar
                     de 2015
                   </h3>
-                  <hr style={{ margin: "0" }} />
+                  <hr style={{ padding: "0" }} />
 
-                  <h3 style={{ marginTop: "5px" }}>
+                  <h3 style={{ padding: "5px" }}>
                     {" "}
                     Responsável pelo gerenciamento de pessoas ,suprimentos,
                     serviços extras dos colaboradores terceiros no contrato de
@@ -244,9 +248,9 @@ export default function Sobre() {
                     Estagiário de administração - Período {">>"} jan de 2013 /
                     fev de 2014
                   </h3>
-                  <hr style={{ margin: "0" }} />
+                  <hr style={{ padding: "0" }} />
 
-                  <h3 style={{ marginTop: "5px" }}>
+                  <h3 style={{ padding: "5px" }}>
                     {" "}
                     Responsável por toda por toda parte de arquivo, atendimento,
                     cadastro e pagamentos sobre benefícios de saúde e educação

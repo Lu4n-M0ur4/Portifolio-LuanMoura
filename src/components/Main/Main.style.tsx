@@ -9,14 +9,16 @@ export const MainContainer = styled.div`
   overflow: hidden;
 
   article {
-    
+    width: 100%;
     height: 100%;
-    padding: 75px 0 75px 75px;
+    display: flex;
+    flex-direction:column;
+    padding: 100px 0 75px 75px;
     color: ${(props) => props.theme.colors.text};
 
     h1 {
       max-width: 20%;
-      /* height: 20%; */
+      /* height: 30%; */
       font-family: "Poppins", sans-serif;
       font-weight: 700;
       font-style: normal;
@@ -28,7 +30,10 @@ export const MainContainer = styled.div`
       animation: typerContent 0.9s 0.2s backwards;
     }
 
+
+
     p {
+      width: 100%;
       font-family: "Poppins", sans-serif;
       font-weight: 300;
       font-size: 24px;
@@ -59,13 +64,19 @@ export const MainContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 50%;
+    width: 100%;
     padding-bottom: 20px;
     animation: personImg 1.4s 0.2s backwards;
 
+    display: flex;
+    align-items: flex-start;
+    padding: 75px 75px 75px 0;
+    justify-content: center;
+
+
     img {
-      width: 75%;
-      max-height: 75%;
+      width: 85%;
+      height: 85%;
       backdrop-filter: brightness(#fff 120%);
       border-radius: 50%;
       padding-top: -4px;

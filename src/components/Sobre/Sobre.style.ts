@@ -14,7 +14,7 @@ export const AboutContainer = styled(Box)`
   align-items: center;
 
   flex-wrap: wrap;
-  margin: 70px 20px 10px 20px;
+  padding: 70px 20px 10px 20px;
 `;
 export const BoxContent = styled(Box)`
   height: 100%;
@@ -31,7 +31,7 @@ export const SectionResume = styled(Box)`
   display: flex;
   align-items: center;
   justify-content: center;
-
+  padding-bottom: 30px;
   gap: 4px;
 `;
 

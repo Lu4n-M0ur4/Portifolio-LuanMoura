@@ -4,12 +4,15 @@ export const LocationContainer = styled.div`
   width: 500px;
 
   height: 100%;
+  padding: 20px;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: center;
 
   .leaflet-container {
-    min-width: 100%;
-    height: 299px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+  
   }
 `;

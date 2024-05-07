@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 #root{  
     /* width: 100vw; */
-    height: 100vh;
+    /* height: 100vh; */
     
 }
 

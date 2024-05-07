@@ -87,7 +87,12 @@ export const FormContainer = styled(Box)`
   justify-content: center;
   align-content: center;
 
+  @media (max-height: 850px) {
+    
+  }
+
   form {
+    height: auto;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -156,6 +161,12 @@ export const FormInputMessage = styled(TextField)`
             border: solid 1px ${props?.theme?.colors?.text}!important;
           }
         `}
+
+  @media (max-height: 850px) {
+    input {
+      height: 100px;
+    }
+  }
 `;
 
 export const FormInputs = styled(TextField)`
@@ -178,11 +189,11 @@ export const FormInputs = styled(TextField)`
       ? css`
           .MuiOutlinedInput-notchedOutline {
             border: solid 1px ${props?.theme?.colors?.text}!important;
-          };
+          }
         `
       : css`
           .MuiOutlinedInput-notchedOutline {
             border: solid 1px ${props?.theme?.colors?.text}!important;
-          };
+          }
         `}
 `;

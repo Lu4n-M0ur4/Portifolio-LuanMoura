@@ -20,7 +20,7 @@ export const CardContainer = styled(Box)`
    
     margin: 0px;
     height: 100%;
-    padding-bottom: 160px;
+    padding-bottom: 60px;
     
   }
 `;
@@ -52,7 +52,7 @@ export const BoxTabs = styled(Box)`
 export const BoxCustom = styled(Box)`
   width: 100%;
   height: 100%;
-  /* padding-top: 10px; */
+  /* padding: 20px; */
   display: flex;
   flex-direction: column;
   align-items: center;
