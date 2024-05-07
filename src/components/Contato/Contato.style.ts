@@ -73,6 +73,22 @@ export const SocialContent = styled(Box)`
             color: ${props?.theme?.colors?.secondary};
           `}
   }
+
+  a{
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+
+    ${(props: ThemeProps) =>
+      props?.theme?.title === "dark"
+        ? css`
+            color: ${props?.theme?.colors?.primary};
+          `
+        : css`
+            color: ${props?.theme?.colors?.secondary};
+          `}
+  }
+  
 `;
 
 export const FormContainer = styled(Box)`
@@ -197,3 +213,4 @@ export const FormInputs = styled(TextField)`
           }
         `}
 `;
+

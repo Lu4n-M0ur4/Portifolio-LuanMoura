@@ -45,6 +45,7 @@ export default function Sobre() {
             <Box fontSize={"32px"} marginTop={"-16px"}>
               <h1> Sobre mim</h1>
             </Box>
+            <br/>
             <h3>
               Meu nome é Luan Moura moro no Rio de Janeiro sou desenvolvedor
               Full Stack, especializado em desenvolvimento web utilizando as
